@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+  <div class="navbar">
+    <%= link_to "Wikinimous", articles_path %>
+    <%= link_to "New Article", new_article_path %>
+  </div>
+  <div class="container">
     <%= yield %>
+  </div>
   </body>
 </html>
